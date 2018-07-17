@@ -1,0 +1,105 @@
+{
+  "description" : "General rules for the zoom.us videoconferencing application. All subdomains of zoom.us are allowed for some protocols since many different edge servers were observed. All IPs in specific netblocks (researched to be narrowly-scoped to Zoom-specific-owned blocks) are allowed for some protocols since many different edge IP directly instead of DNS.",
+  "name" : "app-zoom.us",
+  "rules" : [
+    {
+      "action" : "allow",
+      "creationDate" : 1531795367.065505,
+      "modificationDate" : 1531795389.300941,
+      "notes" : "Port observed from traffic -> netblock from https:\/\/whois.arin.net\/rest\/net\/NET-162-255-36-0-1",
+      "owner" : "me",
+      "ports" : "3478",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "udp",
+      "remote-addresses" : "162.255.36.0-162.255.39.255"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531795487.829623,
+      "modificationDate" : 1531795504.2497311,
+      "notes" : "Port observed from traffic -> netblock from https:\/\/whois.arin.net\/rest\/net\/NET-162-255-36-0-1",
+      "owner" : "me",
+      "ports" : "3479",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "udp",
+      "remote-addresses" : "162.255.36.0-162.255.39.255"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531796069.7524838,
+      "modificationDate" : 1531796198.733655,
+      "notes" : "Port observed from traffic -> netblock from https:\/\/whois.arin.net\/rest\/net\/NET-192-204-0-0-1\/ -> referred to `whois -h rwhois.gin.ntt.net -p 4321 192.204.12.100`",
+      "owner" : "me",
+      "ports" : "8801",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "tcp",
+      "remote-addresses" : "192.204.12.0-192.204.15.255"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531796088.9533801,
+      "modificationDate" : 1531796192.6441751,
+      "notes" : "Port observed from traffic -> netblock from https:\/\/whois.arin.net\/rest\/net\/NET-192-204-0-0-1\/ -> referred to `whois -h rwhois.gin.ntt.net -p 4321 192.204.12.100`",
+      "owner" : "me",
+      "ports" : "8801",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "udp",
+      "remote-addresses" : "192.204.12.0-192.204.15.255"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531795282.440413,
+      "modificationDate" : 1531795303.459981,
+      "notes" : "Port observed from traffic -> netblock from https:\/\/whois.arin.net\/rest\/net\/NET-162-255-36-0-1",
+      "owner" : "me",
+      "ports" : "8801",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "udp",
+      "remote-addresses" : "162.255.36.0-162.255.39.255"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531795137.1700501,
+      "modificationDate" : 1531795225.9868169,
+      "notes" : "Port observed from traffic -> netblock from https:\/\/whois.arin.net\/rest\/net\/NET-162-255-36-0-1",
+      "owner" : "me",
+      "ports" : "8802",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "tcp",
+      "remote-addresses" : "162.255.36.0-162.255.39.255"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531507501.44649,
+      "modificationDate" : 1531795432.0904589,
+      "notes" : "Observed from traffic",
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "tcp",
+      "remote-hosts" : "api.giphy.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531794580.9624209,
+      "modificationDate" : 1531795425.4330781,
+      "notes" : "Allow any HTTPS connection in domain -> many different edge servers observed",
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "tcp",
+      "remote-domains" : "zoom.us"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1531794306.8999219,
+      "modificationDate" : 1531795419.6087899,
+      "notes" : "Allow for entire domain -> many different edge servers observed",
+      "owner" : "me",
+      "ports" : "8802",
+      "process" : "\/Applications\/zoom.us.app\/Contents\/MacOS\/zoom.us",
+      "protocol" : "tcp",
+      "remote-domains" : "zoom.us"
+    }
+  ]
+}
